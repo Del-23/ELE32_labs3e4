@@ -21,6 +21,6 @@ for i=1:length(ms)
         for k=2:length(X)
             x(k) = find(trellis.nextStates(X(k-1)+1,:) == X(k)) - 1;
         end
-        probs_biterr(i, j) = double(1 - sum(x == u, 'all')/numel(x))
+        probs_biterr(i, j) = double(1 - sum(x == u, 'all')/numel(x));
     end
 end
